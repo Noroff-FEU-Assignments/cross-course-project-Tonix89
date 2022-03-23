@@ -1,0 +1,32 @@
+@font-face{
+    font-family: "Tahoma";
+    src: url("../fonts/tahoma.ttf") format("woff2");
+    font-family: "Segoe UI Bold";
+    src: url("../fonts/SegoeUIBold.ttf") format("woff2");
+}
+body{
+    font-family: "Tahoma", Segoe UI, Geneva, Verdana, sans-serif;
+}
+header{
+    font-family: "Segoe UI Bold";
+    background-color: #dbc7c76e;
+}
+header li{
+    display: inline;
+}
+ul, nav a, .header_icons{
+    text-decoration: none;
+    list-style-type: none;
+    color: #152d35;
+}
+.Branding img{
+    size: 700px 900px;
+}
+.About_us, .Information, .Contact, footer a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #dbc7c7;
+}
+.Info{
+    background-color: #152d35;
+}
