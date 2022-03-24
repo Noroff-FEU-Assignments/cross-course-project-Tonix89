@@ -45,7 +45,7 @@ h3{
     padding-bottom: 0;
 }
 .menu nav{
-    margin: 70px 10px;
+    margin: 70px auto;
 }
 .head-icons img{
     width: 25px;
@@ -54,7 +54,7 @@ h3{
     margin:10px
 }
 .head-icons{
-    margin-left: 480px;
+    margin-left: 450px;
 }
 .top{
     background-color: #dbc7c780;
