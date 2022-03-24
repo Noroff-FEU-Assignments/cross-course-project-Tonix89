@@ -4,29 +4,98 @@
     font-family: "Segoe UI Bold";
     src: url("../fonts/SegoeUIBold.ttf") format("woff2");
 }
+
+/** Colors
+#152d35 - dark blue
+#345b63 - light blue
+#dbc7c7 - light pink
+35% - light pink opacity
+**/
+
+/**Body-------------------------------------------
+-------------------**/
 body{
-    font-family: "Tahoma", Segoe UI, Geneva, Verdana, sans-serif;
+    font-family: "Tahoma", Segoe UI, Geneva, Verdana, sans-serif ;
+    margin: 0;
+    padding: 0;
 }
-header{
-    font-family: "Segoe UI Bold";
-    background-color: #dbc7c76e;
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h3{
+    font-family: 'Segoe UI Bold', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    margin: 1px;
+}
+/**Header-------------------------------------------
+-------------------**/
+.logo img{
+    width: 150px;
+    height: 80px;
+    margin: 15px 15px;
+}
+.menu a{
+    font-family: 'Segoe UI Bold';
+    font-size: 30px;
+    color:#152d35;
+    padding-left: 15px;
+    padding-bottom: 0;
+}
+.menu nav{
+    margin: 70px 10px;
+}
+.head-icons img{
+    width: 25px;
+    height: 30px;
+    padding: 5px;
+    margin:10px
+}
+.head-icons{
+    margin-left: 480px;
+}
+.top{
+    background-color: #dbc7c780;
+    width: 191.5vh;
+    height: 110px;
+    display: flex;
 }
 header li{
     display: inline;
 }
-ul, nav a, .header_icons{
-    text-decoration: none;
-    list-style-type: none;
-    color: #152d35;
+/**Main-------------------------------------------
+-------------------**/
+main{
+    margin: 15px 15px;
 }
-.Branding img{
-    size: 700px 900px;
+.branding img{
+    width: 700px;
+    height: 600px;
+    margin-bottom: 30px;
 }
-.About_us, .Information, .Contact, footer a {
-    text-decoration: none;
-    list-style-type: none;
+.flexible{
+    display: flex;
+}
+.strong-durable{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.branding-text{
+    margin: auto 20px;
+    text-align: center;
+    display: block;
+}
+.branding-2{
+    display: flex;
+   margin-right: 10px;
+}
+/**Footer------------------------------------------
+-------------------**/
+.info{
+    background:#152d35 ;
+}
+.info a{
     color: #dbc7c7;
-}
-.Info{
-    background-color: #152d35;
 }
