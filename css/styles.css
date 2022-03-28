@@ -27,7 +27,7 @@ a{
 }
 h3{
     font-family: 'Segoe UI Bold', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 45px;
+    font-size: 35px;
 }
 /**Header-------------------------------------------
 -------------------**/
@@ -68,7 +68,7 @@ label{
     display: none;
 }  
 #hamburger-menu:checked ~ .text {
-    display: none;
+    display: absolute;
  }
 .icon img{
     width: 60px;
@@ -92,12 +92,13 @@ main{
     margin-bottom: 30px;
 }
 .branding-2 img{
-    width: 500px;
+    width: 598px;
     height: 500px;
     margin-bottom: 0;
 }
 .protection, .comfortable{
-    width: 400px;
+    display: grid;
+    grid-auto-columns: min-content;
 }
 .flexible{
     display: flex;
@@ -114,6 +115,9 @@ main{
     text-align: center;
     display: block;
 }
+.branding-text h3{
+    margin: 0;
+}
 .branding h3, .branding p{
     width: 450px;
     text-align: center;
@@ -121,8 +125,9 @@ main{
 }
 .branding-2{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 
 }
 .product{
@@ -235,12 +240,13 @@ main{
     .protection, .comfortable{
         width: 292px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .branding-text h3{
         width: 236px;
         font-size: 25px;
+        margin: 0;
     }
     .branding-text p{
         width: 260px;
@@ -281,18 +287,22 @@ main{
     }
     .icon {
         position: absolute;
-        right: 15px;
-        top: 65px;
+        right: 10px;
+        top: 48px;
     }
     .icon img{
-        width: 40px;
-        height: 30px;
+        width: 30px;
+        height: 20px;
         padding-left: 15px;     
     }
     label{
         display: block;
         position: absolute;
         left: 35px;
+    }
+    .logo {
+        width: 100px;
+        height: 52px;
     }
     .text {
         display: none;
@@ -301,6 +311,20 @@ main{
         background-color: #dbc7c7;
         padding-left: 20px;
     }
+    .branding-text h3{
+        width: 139px;
+        font-size: 15px;
+        margin: 0;
+    }
+    .branding-text p{
+        width: 140px;
+        font-size: 12px;
+        margin: 5px;
+    }
+    .branding img{
+        width: 215px;
+        height: 272px;
+    }
     #hamburger-menu {
         display: none;
     }  
@@ -308,4 +332,33 @@ main{
         display: grid;
     }
 
+}
+@media screen and (max-width: 391px){
+    .branding img {
+        width: 200px;
+    }
+    .picture {
+        height: 197px;
+    }
+    .like-icon {
+        top: 55px;
+        left: 5px;
+    }
+    .like-icon img {
+        width: 35px;
+        height: 33px;
+    }
+    .product p {
+        font-size: 12px;
+    }
+    .add-icon {
+        width: 25px;
+        height: 20px;
+    }
+    .flexible img{
+        margin-left: 15px;
+    }
+    .strong-durable img{
+        margin-right: 15px;
+    }
 }
