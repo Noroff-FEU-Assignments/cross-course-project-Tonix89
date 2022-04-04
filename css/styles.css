@@ -1,65 +1,88 @@
-@font-face{
+@font-face {
     font-family: "Tahoma";
     src: url("../fonts/tahoma.ttf") format("woff2");
     font-family: "Segoe UI Bold";
     src: url("../fonts/SegoeUIBold.ttf") format("woff2");
 }
 
-/** Colors
-#152d35 - dark blue
+/** Colors 
+#152d35 -dark blue
 #345b63 - light blue
-#dbc7c7 - light pink
-35% - light pink opacity
+#dbc7c7 - pink
+#f2e9f0 - light pink
 **/
 
-/**Body-------------------------------------------
--------------------**/
+/** Body---------------------------------------------
+----------------------------**/
 *{
     box-sizing: border-box;
 }
 body{
-    font-family: "Tahoma", Segoe UI, Geneva, Verdana, sans-serif ;
-    min-height: 100%;
+    font-family: "Tahoma", 'Segoe UI', Geneva, Verdana, sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
-a{
+nav a, li, a{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    list-style: none;
     text-decoration: none;
 }
-h3{
-    font-family: 'Segoe UI Bold', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 35px;
+nav a, h1, h2 {
+    font-family: "Segoe UI Bold";
+    color: #152d35;
+    text-align: center;
+    margin-top: 0;
 }
-/**Header-------------------------------------------
--------------------**/
+
+/** Header -----------------------------------------------
+------------------------ **/
 header{
-    overflow: hidden;
-    background-color: #dbc7c7;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 10px;
-}
-header .text a:hover{
-    background-color: #152d35;
-    padding: 0px;
-    color: #dbc7c7;
+    background-color: #edd5e9;
+    min-width: 100vw;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
 }
 .logo{
     width: 150px;
-    height: 80px;
+    height: 85px;
+    margin: 15px 0 5px 10px;
 }
-.text{
-    position: absolute;
-    top: 50px;
-    left: 230px;
+.icons{
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    text-align: right;
+    margin-right: 15px;
+
 }
-.text a{
-    font-family: "Segoe UI Bold", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #152d35;
-    margin-left: 10px;
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+nav{
+    grid-column: 2;
+    grid-row: 2;
+}
+nav ul{
+    display: flex;
+    margin-bottom: 0;
+}
+nav a{
+    font-size: 30px;
+    margin-left: 20px;
+}
+nav a:hover{
+    background-color: #152d35;
     padding: 2px;
     border-radius: 10px;
-    font-size: 40px;
+    color: #dbc7c7;
+}
+.active{
+    text-decoration: underline;
 }
 label{
     display: none;
@@ -67,69 +90,46 @@ label{
 #hamburger-menu {
     display: none;
 }  
-#hamburger-menu:checked ~ .text {
+#hamburger-menu:checked ~ nav a {
     display: absolute;
  }
-.icon img{
-    width: 60px;
-    height: 40px;
-    padding-left: 25px;
-}
-.icon{
-    position: absolute;
-    right: 15px;
-    top: 10px;
-}
-
-/**Main-------------------------------------------
--------------------**/
+/** Main branding------------------------------
+----------------------**/
 main{
-    margin: 15px 15px;
+    background-color: #345b631e;
+    margin-top: 105px;
+    padding: 10px;
 }
 .branding img{
-    width: 725px;
-    height: 600px;
-    margin-bottom: 30px;
-}
-.branding-2 img{
-    width: 598px;
     height: 500px;
-    margin-bottom: 0;
+    width: 520px;
+    margin-bottom: 25px;
 }
-.protection, .comfortable{
+.flexible,.durable{
     display: grid;
-    grid-auto-columns: min-content;
+    grid-template-columns: auto auto;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    align-items: center;
 }
-.flexible{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.durable>img{
+    grid-column: 2;
 }
-.strong-durable{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
-.branding-text{
-    margin: auto 20px;
-    text-align: center;
-    display: block;
-}
-.branding-text h3{
-    margin: 0;
-}
-.branding h3, .branding p{
-    width: 450px;
-    text-align: center;
-
+.durable>.text{
+    grid-column:1 ;
 }
 .branding-2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    text-align: center;
 }
+.branding-2 img{
+    width: 430px;
+    height: 400px;
+}
+/***Main Product---------------------------------
+---------------------**/
 .product{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -138,9 +138,8 @@ main{
     grid-gap: 10px
 }
 .picture{
-    background-color: #dbc7c750;
-    padding: 2px;
-    margin-top: 50px;
+    background-color: #dbc7c7c0;
+    padding: 1px;
     width: 100%;
     height: 350px;
 }
@@ -153,18 +152,19 @@ main{
 .product p{
     margin: 1px 10px;
 }
-.p1, .p2{
-    position: relative;
+.product-sample{
+    display: grid;
+    grid-template-columns: 0px 1fr;
+    grid-template-rows: 351px 1fr;
+    margin-top: 50px;
 }
 .like-icon{
-    position: absolute;
-    top: 50px;
-    left: 10px;
+    grid-area: 1/1/1/1;
+    margin-left: 5px;
 }
 .sale{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    grid-area: 1/1/1/1;
+    margin: 318px 0 8px 8px;
     background-color: #152d35;
     color: #dbc7c7;
     border-radius: 5px;
@@ -175,190 +175,179 @@ main{
     text-decoration: line-through;
     text-decoration-color: #152d35;
 }
-/**Footer------------------------------------------
--------------------**/
+
+/** Footer information -------------------------------------------
+-------------------------**/
 .info{
     display: flex;
-    justify-content: space-between;
-    background:#152d35 ;
+    justify-content: space-around;
+    background-color: #152d35;
     margin-top: 50px;
+    text-align: left;
 }
-.info a{
+.info-header h2, .info-header li{
+    margin-bottom: 5px;
+    text-align: left;
+}
+.info-header a{
     color: #dbc7c7;
 }
-.info li{
-    list-style: none;
-}
-.about{
-    margin-left: 15px;
-}
-.contact{
-    margin-right: 15px;
-    margin-bottom: 5px;
-}
-.bottom{
-    position:relative;
-    top: 50%;
-    bottom: 100%;
+
+/** Footer Social Media ---------------------------------------------
+--------------------------------**/
+.social-media, .payment-partners{
     text-align: center;
+    margin-top: 40px;
 }
-.bottom img{
+footer img{
     width: 50px;
-    height: 50px;
-}
-.info h4{
-    margin-top: 3px;
-    margin-bottom: 5px;
-}
-.copyright{
-    background-color: #dbc7c7;
-    text-align: center;
-    padding: 25px;
-    margin-top: 15px;
+    margin-inline: 20px;
 }
 
-/** Responsiveness **/
-@media  screen and (max-width: 1135px) {
-    .branding-2 img{
-        width: 420px;
+/** Footer Copyright ------------------------------------------------
+-------------------------------**/
+footer p{
+    background-color: #edd5e9;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+/** Responsiveness --------------------------------------------------
+-------------------------------**/
+@media screen and (max-width: 900px) {
+    .branding img{
+        height: 350px;
+        width: 250px;
+    }
+    .product-sample {
+        grid-template-rows: 302px 1fr;
+    }
+    .picture {
         height: 300px;
     }
-    .branding-text h3{
-        width: 360px;
-        font-size: 25px;
+    .sale {
+        margin: 270px 0 8px 8px;
     }
-    .branding-text p{
-        width: 360px;
-        font-size: 15px;
+    .like-icon img{
+        width: 60px;
+        margin-top: 5px;
     }
 }
-@media  screen and (max-width: 1000px){
-    .branding img{
-        width: 292px;
-        height: 365px;
+
+@media screen and (max-width:650px){
+    header{
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    .protection, .comfortable{
-        width: 292px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    header a{
+        grid-column: 2;
     }
-    .branding-text h3{
-        width: 236px;
+    nav a{
+        display: none;
         font-size: 25px;
-        margin: 0;
     }
-    .branding-text p{
-        width: 260px;
-        font-size: 15px;
+    label{
+        display: block;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+    label img{
+        width: 35px;
+    }
+    #hamburger-menu:checked ~ nav a{
+        display: grid;
+        text-align: left;
+    }
+    nav{
+        grid-column: 1;
+    }
+    nav ul{
+        display: inline;
+        position: absolute;
+        background-color: #edd5e9;
+        padding: 10px;
+        margin-top: -40px;
+    }
+    .icons img{
+        width: 25px;
+        height: 25px;
+        margin-right: 3px;
+    }
+    main{
+        margin-top: 80px;
+    }
+    .branding img{
+        height: 326px;
+        width: 200px;
+        margin-bottom: 5px;
     }
     .product{
         grid-template-columns: repeat(2, 1fr);
     }
-}
-@media  screen and (max-width: 830px){
-    .text a{
-        font-family: "Segoe UI Bold", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #152d35;
+    .logo{
+        width: 135px;
+        height: 60px;
+    }
+    .info-header{
         margin-left: 10px;
-        padding: 2px;
-        border-radius: 10px;
-        font-size: 25px;
+        margin-right: 10px;
     }
-    .text{
-        position: absolute;
-        top: 70px;
-        left: 157px;
+    .info-header h2{
+        font-size: 18px;
     }
-    .icon img{
-        width: 50px;
-        height: 30px;
-        padding-left: 25px;
-     }
+    .info-header li{
+        font-size: 12px;
+    }
 }
-@media  screen and (max-width: 600px){
-    header{
-        overflow: hidden;
-        background-color: #dbc7c7;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 10px;
-    }
-    .icon {
-        position: absolute;
-        right: 10px;
-        top: 48px;
-    }
-    .icon img{
-        width: 30px;
-        height: 20px;
-        padding-left: 15px;     
+
+@media screen and (max-width:450px) {
+    .logo{
+        width: 100px;
+        height: 50px;
     }
     label{
-        display: block;
-        position: absolute;
-        left: 35px;
+        margin-top: 25px;
     }
-    .logo {
-        width: 100px;
-        height: 52px;
+    nav ul{
+        padding: 0 3px;
+        margin-top: -15px;
     }
-    .text {
-        display: none;
-        top: 70px;
-        left: -1px;
-        background-color: #dbc7c7;
-        padding-left: 20px;
+    .icons{
+        grid-row: 2;
+        margin-right: 10px;
     }
-    .branding-text h3{
-        width: 139px;
-        font-size: 15px;
-        margin: 0;
-    }
-    .branding-text p{
-        width: 140px;
-        font-size: 12px;
-        margin: 5px;
+    .icons img{
+        width: 20px;
     }
     .branding img{
-        width: 215px;
-        height: 272px;
+        width: 370px;
     }
-    #hamburger-menu {
-        display: none;
-    }  
-    #hamburger-menu:checked ~ .text {
-        display: grid;
+    .flexible, .durable{
+        display: block;
+        text-align: center;
     }
-
-}
-@media screen and (max-width: 391px){
-    .branding img {
-        width: 200px;
+    .durable>img{
+        grid-column: none;
+    }
+    .durable>.text{
+        grid-column: none;
+    }
+    .branding-2{
+        grid-template-columns: none;
+    } 
+    .product-sample {
+        grid-template-rows: 210px 1fr;
     }
     .picture {
-        height: 197px;
+        height: 205px;
     }
-    .like-icon {
-        top: 55px;
-        left: 5px;
+    .sale {
+        margin: 172px 0 15px 8px;
     }
-    .like-icon img {
-        width: 35px;
-        height: 33px;
+    .info-header h2{
+        font-size: 15px;
     }
-    .product p {
-        font-size: 12px;
-    }
-    .add-icon {
-        width: 25px;
-        height: 20px;
-    }
-    .flexible img{
-        margin-left: 15px;
-    }
-    .strong-durable img{
-        margin-right: 15px;
-    }
+
 }
