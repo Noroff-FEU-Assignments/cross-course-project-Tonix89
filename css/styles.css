@@ -308,7 +308,7 @@ footer p{
     }
     form{
         position: relative;
-        top: 25px;
+        top: 22px;
         right: -13;
         margin: -42px 204px 0 5px;
     }
@@ -364,15 +364,16 @@ footer p{
 
 @media screen and (max-width:450px) {
     .logo{
-        width: 100px;
+        width: 90px;
         height: 50px;
+        margin-left: 27px;
     }
     label{
         margin-top: 25px;
     }
     nav ul{
-        padding: 0 3px;
-        margin-top: -15px;
+        padding: 0;
+        margin-top: 34px;
     }
     .icons{
         grid-row: 2;
