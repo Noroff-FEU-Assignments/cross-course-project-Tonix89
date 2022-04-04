@@ -1,4 +1,6 @@
 @font-face {
+    font-family: "Segoe UI";
+    src: url("../fonts/SegoeUI.ttf") format("woff2");
     font-family: "Tahoma";
     src: url("../fonts/tahoma.ttf") format("woff2");
     font-family: "Segoe UI Bold";
@@ -43,7 +45,7 @@ header{
     min-width: 100vw;
     position: fixed;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
 }
 .logo{
     width: 150px;
@@ -51,7 +53,7 @@ header{
     margin: 15px 0 5px 10px;
 }
 .icons{
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 1;
     text-align: right;
     margin-right: 15px;
@@ -64,8 +66,7 @@ header{
     margin-right: 10px;
 }
 nav{
-    grid-column: 2;
-    grid-row: 2;
+    display: grid;
 }
 nav ul{
     display: flex;
@@ -90,9 +91,35 @@ label{
 #hamburger-menu {
     display: none;
 }  
-#hamburger-menu:checked ~ nav a {
+#hamburger-menu:checked ~ nav{
     display: absolute;
  }
+form{
+    grid-column: 4;
+    grid-row: 1;
+    text-align: end;
+    margin: 10px 20px 0 5px;
+}
+.search-bar{
+    width: 255px;
+    height: 40px;
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 20px;
+    border-color: #152d35;
+    border-radius: 25px;
+}
+button{
+    position: fixed;
+    top: 55px;
+    right: 26px;
+    border: 0;
+    background-color: transparent;
+}
+form img{
+    width: 35px;
+}
 /** Main branding------------------------------
 ----------------------**/
 main{
@@ -217,6 +244,9 @@ footer p{
 /** Responsiveness --------------------------------------------------
 -------------------------------**/
 @media screen and (max-width: 900px) {
+    nav{
+        position: none;
+    }
     .branding img{
         height: 350px;
         width: 250px;
@@ -234,6 +264,17 @@ footer p{
         width: 60px;
         margin-top: 5px;
     }
+    button{
+        top: 2px;
+        right: 208px;
+    }
+    form{
+        position: absolute;
+        top: 0;
+        right: 2px;
+        text-align: right;
+        margin: 5px 204px 0 5px;
+    }
 }
 
 @media screen and (max-width:650px){
@@ -243,7 +284,7 @@ footer p{
     header a{
         grid-column: 2;
     }
-    nav a{
+    nav{
         display: none;
         font-size: 25px;
     }
@@ -256,19 +297,38 @@ footer p{
     label img{
         width: 35px;
     }
-    #hamburger-menu:checked ~ nav a{
-        display: grid;
+    #hamburger-menu:checked ~ nav{
+        display: inline-block;
+        position: absolute;
+        top: 42px;
+        background-color: #edd5e9;
+        padding-bottom: 5px;
+        width: 131px;
         text-align: left;
+    }
+    form{
+        position: relative;
+        top: 25px;
+        right: -13;
+        margin: -42px 204px 0 5px;
     }
     nav{
         grid-column: 1;
     }
     nav ul{
-        display: inline;
-        position: absolute;
+        display: inline-block;
         background-color: #edd5e9;
-        padding: 10px;
-        margin-top: -40px;
+        padding: 1px;
+        margin-top: 40px;
+    }
+    .search-bar{
+        font-size: 15px;
+        width: 141px;
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: -137px;
     }
     .icons img{
         width: 25px;
@@ -322,7 +382,7 @@ footer p{
         width: 20px;
     }
     .branding img{
-        width: 370px;
+        width: 340px;
     }
     .flexible, .durable{
         display: block;
