@@ -25,7 +25,7 @@
         top: 2px;
         right: 208px;
     }
-    form{
+    nav form{
         position: absolute;
         top: 0;
         right: 2px;
@@ -45,7 +45,7 @@
         display: none;
         font-size: 25px;
     }
-    label{
+    .header-label{
         display: block;
         position: fixed;
         margin-left: 20px;
@@ -63,7 +63,7 @@
         width: 131px;
         text-align: left;
     }
-    form{
+    nav form{
         position: relative;
         top: 22px;
         right: -13;
@@ -127,6 +127,10 @@
     #see-more2:checked ~ .show-more2{
         grid-template-columns: repeat(2, 1fr);
     }
+    .cart img {
+        width: 50px;
+        height: 65px;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -135,7 +139,7 @@
         height: 50px;
         margin-left: 27px;
     }
-    label{
+    .header-label{
         margin-top: 25px;
     }
     nav ul{
@@ -194,5 +198,20 @@
     .cart img{
         width: 60px;
         height: 85px;
+    }
+    hr{
+        width: 128px;
+    }
+
+/** Checkout Page-----------------------------------------
+----------------------**/
+    .checkout-container hr{
+        width: 295px;
+    }
+    .checkout-container p{
+        font-size: 11px;
+    }
+    .checkout-container img{
+        height: 105px;
     }
 }

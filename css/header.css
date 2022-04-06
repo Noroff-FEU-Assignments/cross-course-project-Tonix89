@@ -6,6 +6,7 @@ header{
     position: fixed;
     display: grid;
     grid-template-columns: auto 1fr auto auto;
+    z-index: 10;
 }
 .logo{
     width: 150px;
@@ -45,7 +46,7 @@ nav a:hover{
 .active{
     text-decoration: underline;
 }
-label{
+.header-label{
     display: none;
 }
 #hamburger-menu {
@@ -54,7 +55,7 @@ label{
 #hamburger-menu:checked ~ nav{
     display: absolute;
  }
-form{
+nav form{
     grid-column: 4;
     grid-row: 1;
     text-align: end;

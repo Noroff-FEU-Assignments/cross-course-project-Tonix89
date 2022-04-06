@@ -31,14 +31,17 @@
     top: 35px;
 }
 .cart-box{
-    display: flex;
+    display: block;
     text-align: left;
     background-color: #fff;
+}
+.cart-box-item{
+    display: flex;
 }
 .goto-checkout{
     display: inline-block;
     background-color: #dbc7c7;
-    box-shadow: 3px 3px 3px #efa8c1;
+    box-shadow: 0 3px 9px 3px #efa8c1;
     border-radius: 10px;
     width: 115px;
     margin-top: 10px;
@@ -47,4 +50,14 @@
 .goto-checkout p{
     font-family: "Segoe UI Bold";
     color: #152d35;
+}
+.cart-box hr{
+    width: 176px;
+    height: 2px;
+    background-color: #dbc7c7;
+    border-radius: 50px;
+    border: 0;     
+}
+.cart-text{
+    margin-right: 20px;
 }
