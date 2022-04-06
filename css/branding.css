@@ -1,0 +1,35 @@
+/** Main branding------------------------------
+----------------------**/
+main{
+    background-color: #345b631e;
+    margin-top: 105px;
+    padding: 10px;
+}
+.branding img{
+    height: 500px;
+    width: 520px;
+    margin-bottom: 25px;
+}
+.flexible,.durable{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    align-items: center;
+}
+.durable>img{
+    grid-column: 2;
+}
+.durable>.text{
+    grid-column:1 ;
+}
+.branding-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    text-align: center;
+}
+.branding-2 img{
+    width: 430px;
+    height: 400px;
+}

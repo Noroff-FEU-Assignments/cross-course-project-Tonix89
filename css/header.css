@@ -1,0 +1,83 @@
+/** Header -----------------------------------------------
+------------------------ **/
+header{
+    background-color: #f4ebeb;
+    min-width: 100vw;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+}
+.logo{
+    width: 150px;
+    height: 85px;
+    margin: 15px 0 5px 10px;
+}
+.icons{
+    grid-column: 2 / span 4;
+    grid-row: 1;
+    text-align: right;
+    margin-right: 15px;
+
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+nav{
+    display: grid;
+}
+nav ul{
+    display: flex;
+    margin-bottom: 0;
+}
+nav a{
+    font-size: 30px;
+    margin-left: 20px;
+}
+nav a:hover{
+    background-color: #152d35;
+    padding: 2px;
+    border-radius: 10px;
+    color: #dbc7c7;
+}
+.active{
+    text-decoration: underline;
+}
+label{
+    display: none;
+}
+#hamburger-menu {
+    display: none;
+}  
+#hamburger-menu:checked ~ nav{
+    display: absolute;
+ }
+form{
+    grid-column: 4;
+    grid-row: 1;
+    text-align: end;
+    margin: 10px 20px 0 5px;
+}
+.search-bar{
+    width: 255px;
+    height: 40px;
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 45px;
+    border-color: #152d35;
+    border-radius: 25px;
+}
+button{
+    position: fixed;
+    top: 55px;
+    right: 26px;
+    border: 0;
+    background-color: transparent;
+}
+form img{
+    width: 35px;
+}

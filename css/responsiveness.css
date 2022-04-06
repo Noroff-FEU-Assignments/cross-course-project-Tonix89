@@ -1,0 +1,192 @@
+/** Responsiveness --------------------------------------------------
+-------------------------------**/
+@media screen and (max-width: 900px) {
+    nav{
+        position: none;
+    }
+    .branding img{
+        height: 350px;
+        width: 250px;
+    }
+    .product-sample {
+        grid-template-rows: 302px 1fr;
+    }
+    .picture {
+        height: 300px;
+    }
+    .sale {
+        margin: 270px 0 8px 8px;
+    }
+    .like-icon img{
+        width: 60px;
+        margin-top: 5px;
+    }
+    button{
+        top: 2px;
+        right: 208px;
+    }
+    form{
+        position: absolute;
+        top: 0;
+        right: 2px;
+        text-align: right;
+        margin: 5px 204px 0 5px;
+    }
+}
+
+@media screen and (max-width:650px){
+    header{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header a{
+        grid-column: 2;
+    }
+    nav{
+        display: none;
+        font-size: 25px;
+    }
+    label{
+        display: block;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+    label img{
+        width: 35px;
+    }
+    #hamburger-menu:checked ~ nav{
+        display: inline-block;
+        position: absolute;
+        top: 42px;
+        background-color: #f4ebeb;
+        padding-bottom: 5px;
+        width: 131px;
+        text-align: left;
+    }
+    form{
+        position: relative;
+        top: 22px;
+        right: -13;
+        margin: -42px 204px 0 5px;
+    }
+    nav{
+        grid-column: 1;
+    }
+    nav ul{
+        display: inline-block;
+        background-color: #f4ebeb;
+        padding: 1px;
+        margin-top: 40px;
+    }
+    .search-bar{
+        padding-right: 41px ;
+        font-size: 15px;
+        width: 141px;
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: -137px;
+    }
+    .icons img{
+        width: 25px;
+        height: 25px;
+        margin-right: 3px;
+    }
+    main{
+        margin-top: 80px;
+    }
+    .branding img{
+        height: 326px;
+        width: 200px;
+        margin-bottom: 5px;
+    }
+    .product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo{
+        width: 135px;
+        height: 60px;
+    }
+    .info-header{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .info-header h2{
+        font-size: 18px;
+    }
+    .info-header li{
+        font-size: 12px;
+    }
+    #top-cart:checked ~ .cart{
+        right: 50px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .logo{
+        width: 90px;
+        height: 50px;
+        margin-left: 27px;
+    }
+    label{
+        margin-top: 25px;
+    }
+    nav ul{
+        padding: 0;
+        margin-top: 34px;
+    }
+    .icons{
+        grid-row: 2;
+        margin-right: 10px;
+    }
+    .icons img{
+        width: 20px;
+    }
+    .branding img{
+        width: 340px;
+    }
+    .flexible, .durable{
+        display: block;
+        text-align: center;
+    }
+    .durable>img{
+        grid-column: none;
+    }
+    .durable>.text{
+        grid-column: none;
+    }
+    .branding-2{
+        grid-template-columns: none;
+    } 
+    .product-sample {
+        grid-template-rows: 210px 1fr;
+    }
+    .picture {
+        height: 205px;
+    }
+    .sale {
+        margin: 172px 0 15px 8px;
+    }
+    .info-header h2{
+        font-size: 15px;
+    }
+
+/** Cart icon responsiveness---------------------------
+------------------------**/
+    #top-cart:checked ~ .cart{
+        right: 40px;
+        top: 70px;
+        width: 156px;
+    }
+    .cart h1{
+       font-size: larger; 
+    }
+    .cart p{
+        font-size: small;
+    }
+    .cart img{
+        width: 60px;
+        height: 85px;
+    }
+}
