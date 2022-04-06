@@ -11,7 +11,7 @@
 #152d35 -dark blue
 #345b63 - light blue
 #dbc7c7 - pink
-#f2e9f0 - light pink
+##f4ebeb - light pink
 **/
 
 /** Body---------------------------------------------
@@ -41,7 +41,7 @@ nav a, h1, h2 {
 /** Header -----------------------------------------------
 ------------------------ **/
 header{
-    background-color: #edd5e9;
+    background-color: #f4ebeb;
     min-width: 100vw;
     position: fixed;
     display: grid;
@@ -107,6 +107,7 @@ form{
     font-style: italic;
     font-size: 20px;
     padding-left: 20px;
+    padding-right: 45px;
     border-color: #152d35;
     border-radius: 25px;
 }
@@ -120,6 +121,37 @@ button{
 form img{
     width: 35px;
 }
+
+/** Cart style ---------------------------------
+---------------------------------**/
+.cart{
+    display: none;
+}
+.cart h1{
+    color: #dbc7c7;
+}
+.cart img{
+    width: 50px;
+    height: 70px;
+}
+.cart p{
+    margin: 5px;
+}
+.top-cart:hover + .cart{
+    display:block;
+    background-color: #152d35;
+    color: #152d35;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    right: 25px;
+    top: 35px;
+}
+.cart-box{
+    display: flex;
+    background-color: #fff;
+}
+
 /** Main branding------------------------------
 ----------------------**/
 main{
@@ -165,8 +197,7 @@ main{
     grid-gap: 10px
 }
 .picture{
-    background-color: #dbc7c7c0;
-    padding: 1px;
+    box-shadow: 2px 2px 4px #dbc7c7;
     width: 100%;
     height: 350px;
 }
@@ -234,7 +265,7 @@ footer img{
 /** Footer Copyright ------------------------------------------------
 -------------------------------**/
 footer p{
-    background-color: #edd5e9;
+    background-color: #f4ebeb;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 0;
@@ -301,7 +332,7 @@ footer p{
         display: inline-block;
         position: absolute;
         top: 42px;
-        background-color: #edd5e9;
+        background-color: #f4ebeb;
         padding-bottom: 5px;
         width: 131px;
         text-align: left;
@@ -317,7 +348,7 @@ footer p{
     }
     nav ul{
         display: inline-block;
-        background-color: #edd5e9;
+        background-color: #f4ebeb;
         padding: 1px;
         margin-top: 40px;
     }
@@ -412,4 +443,48 @@ footer p{
         font-size: 15px;
     }
 
+}
+
+/** Style for List of Jackets page--------------------------------
+------------------------------**/
+.more-products{
+    display: block;
+    text-align: center;
+    font-family: "Tahoma";
+    font-size: 20px;
+}
+.show-more{
+    display: none;
+}
+.show-more p, .show-more2 p {
+    margin: 1px 10px;
+}
+#see-more, #see-more2, .more-products2,.show-more2  {
+    display: none;
+}  
+#see-more:checked ~ .show-more{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    margin: auto;
+    grid-gap: 10px;
+}
+#see-more:checked ~ .more-products{
+    display: none;
+}
+#see-more:checked ~ .more-products2{
+    display: block;
+    text-align: center;
+    font-family: "Tahoma";
+    font-size: 20px;
+}
+#see-more2:checked ~ .show-more2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    margin: auto;
+    grid-gap: 10px;
+}
+#see-more2:checked ~ .more-products2{
+    display: none;
 }
