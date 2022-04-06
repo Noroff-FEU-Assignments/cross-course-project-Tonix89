@@ -18,7 +18,7 @@
         margin: 270px 0 8px 8px;
     }
     .like-icon img{
-        width: 60px;
+        width: 40px;
         margin-top: 5px;
     }
     button{
@@ -120,6 +120,12 @@
     }
     #top-cart:checked ~ .cart{
         right: 50px;
+    }
+    #see-more:checked ~ .show-more{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #see-more2:checked ~ .show-more2{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
