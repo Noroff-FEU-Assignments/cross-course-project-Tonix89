@@ -454,6 +454,13 @@ footer p{
     #top-cart:checked ~ .cart{
         right: 13px;
         top: 70px;
+        width: 156px;
+    }
+    .cart h1{
+       font-size: larger; 
+    }
+    .cart p{
+        font-size: small;
     }
 
 }
