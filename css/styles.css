@@ -137,7 +137,13 @@ form img{
 .cart p{
     margin: 5px;
 }
-.top-cart:hover + .cart{
+.top-cart{
+    display: contents;
+}
+#top-cart{
+    display: none;
+}
+#top-cart:checked ~ .cart{
     display:block;
     background-color: #152d35;
     color: #152d35;
@@ -443,6 +449,13 @@ footer p{
         font-size: 15px;
     }
 
+/** Cart icon responsiveness---------------------------
+------------------------**/
+    #top-cart:checked ~ .cart{
+        right: 13px;
+        top: 70px;
+    }
+
 }
 
 /** Style for List of Jackets page--------------------------------
@@ -488,3 +501,5 @@ footer p{
 #see-more2:checked ~ .more-products2{
     display: none;
 }
+
+
