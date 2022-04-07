@@ -19,9 +19,9 @@
         <label for="hamburger-menu" class="header-label"><img src="icons/Menu Icon.png"></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
-            <form>
+            <form class="search-container">
                 <input placeholder="Search here..." name="search" type="text"  class="search-bar">
-                <button type="submit"><img src="icons/Search icon.png"></button>
+                <button type="submit" class="submit-button"><img src="icons/Search icon.png"></button>
             </form>
             <ul>
                 <li><a href="listofjackets.html">All</a></li>
@@ -66,7 +66,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="checkout-page">
         <div class="checkout">
             <h1>Checkout</h1>
             <div class="checkout-container">
@@ -75,20 +75,23 @@
                     <div class="cart-text">
                         <p>Regatta X-Pro Stretch</p>
                         <p>Hybrid Hooded Fleece</p>
-                        <div class="item-sizes">
-                            <ul>
-                                <li>S</li>
-                                <li class="size-m">M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                        </div>
-                        <div class="item-pieces">
-                            <p>-</p>
-                            <p>1</p>
-                            <p>+</p>
-                            <p>Remove</p>
-                        </div>
+                        <form class="item-sizes">
+                            <input type="radio" id="size-s" name="item-sizes">
+                            <label for="size-s" class="size-s">S</label>
+                            <input type="radio" id="size-m" name="item-sizes">
+                            <label for="size-m" class="size-m">M</label>
+                            <input type="radio" id="size-l" name="item-sizes">
+                            <label for="size-l" class="size-l">L</label>
+                            <input type="radio" id="size-xl" name="item-sizes">
+                            <label for="size-xl" class="size-xl">XL</label>
+                        </form>
+                        <br>
+                        <form class="item-pieces">
+                            <input type="button" id="minus" value="-">
+                            <p class="pieces-number">1</p>
+                            <input type="button" id="plus" value="+">
+                            <button type="reset" class="remove-button">Remove</button>
+                        </form>
                     </div>
                     <p>150 Kr.</p>
                 </div>
@@ -97,20 +100,23 @@
                     <div class="cart-text">
                         <p>Regatta X-Pro Stretch</p>
                         <p>Hybrid Hooded Fleece</p>
-                        <div class="item-sizes">
-                            <ul>
-                                <li class="size-s">S</li>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                        </div>
-                        <div class="item-pieces">
-                            <p>-</p>
-                            <p>1</p>
-                            <p>+</p>
-                            <p>Remove</p>
-                        </div>
+                        <form class="item-sizes">
+                            <input type="radio" id="size-s" name="item-sizes">
+                            <label for="size-s" class="size-s">S</label>
+                            <input type="radio" id="size-m" name="item-sizes">
+                            <label for="size-m" class="size-m">M</label>
+                            <input type="radio" id="size-l" name="item-sizes">
+                            <label for="size-l" class="size-l">L</label>
+                            <input type="radio" id="size-xl" name="item-sizes">
+                            <label for="size-xl" class="size-xl">XL</label>
+                        </form>
+                        <br>
+                        <form class="item-pieces">
+                            <input type="button" id="minus" value="-">
+                            <p class="pieces-number">1</p>
+                            <input type="button" id="plus" value="+">
+                            <button type="reset" class="remove-button">Remove</button>
+                        </form>
                     </div>
                     <p>150 Kr.</p>
                 </div>
@@ -124,19 +130,33 @@
                 </div>
                 <hr>
                 <div class="delivery-option">
-                    <h1>Delivery Option</h1>
+                    <h2>Delivery Option</h1>
                     <form >
-                        <input type="radio" id="home">
-                        <label for="home">Home</label><br>
-                        <input type="radio" id="pick-up">
+                        <input type="radio" id="home" name="delivery">
+                        <label for="home">Home</label><br><br>
+                        <input type="radio" id="pick-up" name="delivery">
                         <label for="pick-up">Pick-Up Point</label>
                     </form>
                 </div>
                 <hr>
-                <div>
-
+                <div class="payment-container">
+                    <h2>Payment Option</h1>
+                    <form class="payment-option">
+                        <input type="radio" id="paypal" name="payment">
+                        <label for="paypal"><img src="icons/Paypal.jpg"></label><br>
+                        <input type="radio" id="vipps" name="payment">
+                        <label for="vipps"><img src="icons/vipps.jpg"></label><br>
+                        <input type="radio" id="visa" name="payment">
+                        <label for="visa"><img src="icons/visa.jpg"></label><br>
+                    </form>
+                </div>
+                <br>
+                <div class="total">
+                    <p>Total Sum</p>
+                    <p>300 kr.</p>
                 </div>
             </div>
+            <input type="button" value="Pay Order" id="pay-order">
         </div>
     </main>
 

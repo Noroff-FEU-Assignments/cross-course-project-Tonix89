@@ -1,4 +1,107 @@
+.checkout-page{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
 .checkout{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+.checkout h1{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    margin: 0;
+}
+.checkout-container{
+    grid-column: 1/ span 3;
+    grid-row: 2;
+    background-color: white;
+    border-style: solid;
+    border-color: #dbc7c7;
+}
+.checkout-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.item-sizes input{
+    display: none;
+}
+#size-s:checked~ .size-s, #size-m:checked~ .size-m, #size-l:checked~ .size-l, #size-xl:checked~ .size-xl{
+    background-color: #152d35;
+    color:#dbc7c7;
+    border-radius: 50%;
+}
+.item-pieces{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+}
+.checkout img{
+    width: 100px;
+    height: 100px;
+}
+#pay-order{
+    grid-column: 2;
+    grid-row: 3;
+}
+.discount-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+}
+.discount-container p{
+    margin: 35px 0 0 50px;
+}
+.payment-container{
+    text-align: center;
+}
+
+.payment-option img{
+    width: 50px;
+    height: 50px;
+}
+.payment-option input{
+    position: relative;
+    top: -17px;
+}
+#pay-order{
+    margin-top: 10px;
+    background-color: #dbc7c7;
+    color: #152d35;
+    font-family: "Tahoma";
+    font-size: 18px;
+    border: 0;
+    box-shadow: 3px 2px 10px -1px;
+    border-radius: 25px;
+}
+.checkout-container hr{
+    background-color: #dbc7c7;
+    margin: 10px;
+    padding: 1px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 11px 3px #dbc7c7;
+    z-index: 1;       
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    background-color: #152d35;
+    color: #dbc7c7;
+    padding: 5px;
+}
+.checkout-container .total p{
+    font-family: "Segoe UI Bold";
+    font-style: oblique;
+    font-size: 20px;
+}
+
+
+/**.checkout{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto;
@@ -83,3 +186,7 @@
 #home{
     margin-bottom: 10px;
 }
+.white-container{
+    background-color: white;
+}
+**/

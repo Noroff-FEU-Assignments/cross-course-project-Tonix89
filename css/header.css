@@ -72,13 +72,13 @@ nav form{
     border-color: #152d35;
     border-radius: 25px;
 }
-button{
+.submit-button{
     position: fixed;
     top: 55px;
     right: 26px;
     border: 0;
     background-color: transparent;
 }
-form img{
+.search-container img{
     width: 35px;
 }
