@@ -6,6 +6,7 @@ header{
     position: fixed;
     display: grid;
     grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto auto;
     z-index: 10;
 }
 .logo{
@@ -26,18 +27,18 @@ header{
     margin-top: 5px;
     margin-right: 10px;
 }
-nav{
+header nav{
     display: grid;
 }
-nav ul{
+header nav ul{
     display: flex;
     margin-bottom: 0;
 }
-nav a{
+header nav a{
     font-size: 30px;
     margin-left: 20px;
 }
-nav a:hover{
+header nav a:hover{
     background-color: #152d35;
     padding: 2px;
     border-radius: 10px;
@@ -55,7 +56,7 @@ nav a:hover{
 #hamburger-menu:checked ~ nav{
     display: absolute;
  }
-nav form{
+header nav form{
     grid-column: 4;
     grid-row: 1;
     text-align: end;

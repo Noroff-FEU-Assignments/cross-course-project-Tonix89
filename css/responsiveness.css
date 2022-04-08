@@ -1,7 +1,7 @@
 /** Responsiveness --------------------------------------------------
 -------------------------------**/
 @media screen and (max-width: 900px) {
-    nav{
+    header nav{
         position: none;
     }
     .branding img{
@@ -25,12 +25,22 @@
         top: 2px;
         right: 208px;
     }
-    nav form{
+    header nav form{
         position: absolute;
         top: 0;
         right: 2px;
         text-align: right;
         margin: 5px 204px 0 5px;
+    }
+/** Checkout page ----------------------------------
+---------------------**/
+    .success-container div{
+        font-size: 40px;
+    }
+/** About Us ----------------------------------------------
+------------------------------------**/
+    .aboutpage {
+        height: 1325px;
     }
 }
 
@@ -41,7 +51,7 @@
     header a{
         grid-column: 2;
     }
-    nav{
+    header nav{
         display: none;
         font-size: 25px;
     }
@@ -63,16 +73,16 @@
         width: 131px;
         text-align: left;
     }
-    nav form{
+    header nav form{
         position: relative;
         top: 22px;
         right: -13;
         margin: -42px 204px 0 5px;
     }
-    nav{
+    header nav{
         grid-column: 1;
     }
-    nav ul{
+    header nav ul{
         display: inline-block;
         background-color: #f4ebeb;
         padding: 1px;
@@ -131,6 +141,32 @@
         width: 50px;
         height: 65px;
     }
+/** Checkout page ----------------------------------
+---------------------**/
+    .success-container div{
+        font-size: 25px;
+    }
+/** About Us --------------------------------------------
+---------------------------**/
+    .aboutus-container{
+    margin: -100px 10px;
+    }
+    .aboutus a{
+        margin: 3px;
+        font-size: 15px;
+    }
+    .aboutus{
+        margin-top: -34px;
+        margin-left: -10px;
+    }
+    .aboutus-text::before{
+        height: 190px;
+    }
+/** Info -----------------------------------------------
+----------------------------**/
+    #info{
+        margin-top: 190px;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -142,7 +178,7 @@
     .header-label{
         margin-top: 25px;
     }
-    nav ul{
+    header nav ul{
         padding: 0;
         margin-top: 34px;
     }
@@ -208,4 +244,7 @@
     .checkout-container img{
         height: 50px;
     }
-}
+    .success-container div{
+        margin-top: 75px;
+        font-size: 20px;
+    }

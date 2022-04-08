@@ -1,4 +1,11 @@
 @import "checkout.css";
+@import "branding.css";
+@import "cartpreview.css";
+@import "footer.css";
+@import "header.css";
+@import "product.css";
+@import "infopage.css";
+@import "responsiveness.css";
 
 @font-face {
     font-family: "Segoe UI";
@@ -20,12 +27,13 @@
 ----------------------------**/
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Tahoma", 'Segoe UI', Geneva, Verdana, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto ;
 }
 nav a, li, a{
     grid-column: 1;
