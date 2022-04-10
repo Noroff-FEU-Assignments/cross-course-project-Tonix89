@@ -14,6 +14,12 @@
 .info-header a{
     color: #dbc7c7;
 }
+.info-header a:hover{
+    background-color: #dbc7c7;
+    color: #152d35;
+    border-radius: 10px;
+    padding: 1px;
+}
 
 /** Footer Social Media ---------------------------------------------
 --------------------------------**/
@@ -23,7 +29,10 @@
 }
 footer img{
     width: 50px;
-    margin-inline: 20px;
+    margin: 20px;
+}
+footer img:hover{
+    width: 60px;
 }
 
 /** Footer Copyright ------------------------------------------------

@@ -6,6 +6,7 @@
 @import "product.css";
 @import "infopage.css";
 @import "responsiveness.css";
+@import "mobileresponsiveness.css";
 
 @font-face {
     font-family: "Segoe UI";
