@@ -89,24 +89,27 @@
 
 /** Checkout Page-----------------------------------------
 ----------------------**/
-header #all:hover ~.jacketspecific{
-    left:55px;
-    top: 30px;
-}
-header #man:hover ~.jacketspecific{
-    left: 55px;
-    top: 45px;
-}
-header #woman:hover ~.jacketspecific{
-    left: 70px;
-    top: 55px;
-}
-header #sale:hover ~.jacketspecific{
-    left: 55px;
-    top: 85px;
-}
-header #new:hover ~.jacketspecific{
-    left: 55px;
-    top: 110px;
-}
+    header #all:hover ~.jacketspecific{
+        left:45px;
+        top: 29px;
+    }
+    header #man:hover ~.jacketspecific{
+        left: 56px;
+        top: 60px;
+    }
+    header #woman:hover ~.jacketspecific{
+        left: 79px;
+        top: 89px;
+    }
+    header #sale:hover ~.jacketspecific{
+        left: 53px;
+        top: 119px;
+    }
+    header #new:hover ~.jacketspecific{
+        left: 55px;
+        top: 149px;
+    }
+    .jacketspecific p{
+        font-size: 16px;
+    }
 }

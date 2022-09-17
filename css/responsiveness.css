@@ -103,6 +103,32 @@
         height: 25px;
         margin-right: 3px;
     }
+    header #all:hover ~.jacketspecific{
+        left:64px;
+        top: 37px;
+    }
+    header #man:hover ~.jacketspecific{
+        left: 89px;
+        top: 76px;
+    }
+    header #woman:hover ~.jacketspecific{
+        left: 135px;
+        top: 116px;
+    }
+    header #sale:hover ~.jacketspecific{
+        left: 83px;
+        top: 155px;
+    }
+    header #new:hover ~.jacketspecific{
+        left: 90px;
+        top: 194px;
+    }
+    .jacketspecific p{
+        font-size: 25px;
+        margin: 5px;
+    }
+/** main---------------------------------------------
+---------------------------------**/
     main{
         margin-top: 80px;
     }
