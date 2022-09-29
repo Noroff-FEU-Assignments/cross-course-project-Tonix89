@@ -1,0 +1,52 @@
+@import "checkout.css";
+@import "branding.css";
+@import "cartpreview.css";
+@import "footer.css";
+@import "header.css";
+@import "product.css";
+@import "infopage.css";
+@import "jacketsspecific.css";
+@import "responsiveness.css";
+@import "mobileresponsiveness.css";
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("../fonts/SegoeUI.ttf") format("woff2");
+    font-family: "Tahoma";
+    src: url("../fonts/tahoma.ttf") format("woff2");
+    font-family: "Segoe UI Bold";
+    src: url("../fonts/SegoeUIBold.ttf") format("woff2");
+}
+
+/** Colors 
+#152d35 -dark blue
+#345b63 - light blue
+#dbc7c7 - pink
+#f4ebeb - light pink
+**/
+
+/** Body---------------------------------------------
+----------------------------**/
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Tahoma", 'Segoe UI', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto ;
+}
+nav a, li, a{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    list-style: none;
+    text-decoration: none;
+}
+nav a, h1, h2 {
+    font-family: "Segoe UI Bold";
+    color: #152d35;
+    text-align: center;
+    margin-top: 0;
+}
+

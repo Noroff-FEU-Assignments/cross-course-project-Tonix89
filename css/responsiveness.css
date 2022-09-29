@@ -1,0 +1,196 @@
+/** Responsiveness --------------------------------------------------
+-------------------------------**/
+@media screen and (max-width: 900px) {
+    header nav{
+        position: none;
+    }
+    .branding img{
+        height: 350px;
+        width: 250px;
+    }
+    .product-sample {
+        grid-template-rows: 302px 1fr;
+    }
+    .picture {
+        height: 300px;
+    }
+    .sale {
+        margin: 270px 0 8px 8px;
+    }
+    .like-icon img{
+        width: 40px;
+        margin-top: 5px;
+    }
+    .submit-button{
+        top: 2px;
+        right: 208px;
+    }
+    header nav form{
+        position: absolute;
+        top: 0;
+        right: 2px;
+        text-align: right;
+        margin: 5px 204px 0 5px;
+    }
+/** Checkout page ----------------------------------
+---------------------**/
+    .success-container div{
+        font-size: 40px;
+    }
+/** About Us ----------------------------------------------
+------------------------------------**/
+    .aboutpage {
+        height: 1325px;
+    }
+}
+
+@media screen and (max-width:650px){
+    header{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header a{
+        grid-column: 2;
+    }
+    header nav{
+        display: none;
+        font-size: 25px;
+    }
+    .header-label{
+        display: block;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+    label img{
+        width: 35px;
+    }
+    #hamburger-menu:checked ~ nav{
+        display: inline-block;
+        position: absolute;
+        top: 42px;
+        background-color: #f4ebeb;
+        padding-bottom: 5px;
+        width: 131px;
+        text-align: left;
+    }
+    header nav form{
+        position: relative;
+        top: 22px;
+        right: -13;
+        margin: -42px 204px 0 5px;
+    }
+    header nav{
+        grid-column: 1;
+    }
+    header nav ul{
+        display: inline-block;
+        background-color: #f4ebeb;
+        padding: 1px;
+        margin-top: 40px;
+    }
+    .search-bar{
+        padding-right: 41px ;
+        font-size: 15px;
+        width: 141px;
+    }
+    .submit-button{
+        position: absolute;
+        top: 0;
+        right: -137px;
+    }
+    .icons img{
+        width: 25px;
+        height: 25px;
+        margin-right: 3px;
+    }
+    header #all:hover ~.jacketspecific{
+        left:64px;
+        top: 37px;
+    }
+    header #man:hover ~.jacketspecific{
+        left: 89px;
+        top: 76px;
+    }
+    header #woman:hover ~.jacketspecific{
+        left: 135px;
+        top: 116px;
+    }
+    header #sale:hover ~.jacketspecific{
+        left: 83px;
+        top: 155px;
+    }
+    header #new:hover ~.jacketspecific{
+        left: 90px;
+        top: 194px;
+    }
+    .jacketspecific p{
+        font-size: 25px;
+        margin: 5px;
+    }
+/** main---------------------------------------------
+---------------------------------**/
+    main{
+        margin-top: 80px;
+    }
+    .branding img{
+        height: 326px;
+        width: 200px;
+        margin-bottom: 5px;
+    }
+    .product{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo{
+        width: 135px;
+        height: 60px;
+    }
+    .info-header{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .info-header h2{
+        font-size: 18px;
+    }
+    .info-header li{
+        font-size: 12px;
+    }
+    #top-cart:checked ~ .cart{
+        right: 50px;
+    }
+    #see-more:checked ~ .show-more{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #see-more2:checked ~ .show-more2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cart img {
+        width: 50px;
+        height: 65px;
+    }
+/** Checkout page ----------------------------------
+---------------------**/
+    .success-container div{
+        font-size: 25px;
+    }
+/** About Us --------------------------------------------
+---------------------------**/
+    .aboutus-container{
+    margin: -100px 10px;
+    }
+    .aboutus a{
+        margin: 3px;
+        font-size: 15px;
+    }
+    .aboutus{
+        margin-top: -34px;
+        margin-left: -10px;
+    }
+    .aboutus-text::before{
+        height: 190px;
+    }
+/** Info -----------------------------------------------
+----------------------------**/
+    #info{
+        margin-top: 190px;
+    }
+}

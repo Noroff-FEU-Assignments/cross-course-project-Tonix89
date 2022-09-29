@@ -1,0 +1,27 @@
+.jacketspecific{
+    display: none;
+}
+header #all:hover +.jacketspecific,
+header #man:hover ~.jacketspecific,
+header #woman:hover ~.jacketspecific,
+header #sale:hover ~.jacketspecific,
+header #new:hover ~.jacketspecific{
+    display: block;
+    left: 220px;
+    position: absolute;
+    top: 100px;
+    background-color: #f4ebeb;
+    padding: 5px;
+}
+header #man:hover ~.jacketspecific{
+    left: 280px;
+}
+header #woman:hover ~.jacketspecific{
+    left: 360px;
+}
+header #sale:hover ~.jacketspecific{
+    left: 490px;
+}
+header #new:hover ~.jacketspecific{
+    left: 570px;
+}

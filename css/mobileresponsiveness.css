@@ -1,0 +1,115 @@
+@media screen and (max-width:450px) {
+    .logo{
+        width: 90px;
+        height: 50px;
+        margin-left: 27px;
+    }
+    .header-label{
+        margin-top: 25px;
+    }
+    header nav ul{
+        padding: 0;
+        margin-top: 34px;
+    }
+    header nav a{
+        font-size: 15px;
+    }
+    #hamburger-menu:checked ~ nav{
+        width: 95px;
+        top: 38px;
+    }
+    .icons{
+        grid-row: 2;
+        margin-right: 10px;
+    }
+    .icons img{
+        width: 20px;
+    }
+    .branding img{
+        width: 340px;
+    }
+    .flexible, .durable{
+        display: block;
+        text-align: center;
+    }
+    .durable>img{
+        grid-column: none;
+    }
+    .durable>.text{
+        grid-column: none;
+    }
+    .branding-2{
+        grid-template-columns: none;
+    } 
+    .product-sample {
+        grid-template-rows: 210px 1fr;
+    }
+    .picture {
+        height: 205px;
+    }
+    .sale {
+        margin: 172px 0 15px 8px;
+    }
+    .info-header h2{
+        font-size: 15px;
+    }
+    .search-bar{
+        height: 25px;
+    }
+    .search-container img {
+        width: 25px;
+    }
+    .submit-button{
+        top: 4px;
+    }
+
+/** Footer ------------------------------------------
+----------------------------------------**/
+    .info .info-header a{
+        font-size: 14px;
+    }
+
+/** Cart icon responsiveness---------------------------
+------------------------**/
+    #top-cart:checked ~ .cart{
+        right: 40px;
+        top: 70px;
+        width: 156px;
+    }
+    .cart h1{
+       font-size: larger; 
+    }
+    .cart p{
+        font-size: small;
+    }
+    .cart img{
+        width: 60px;
+        height: 85px;
+    }
+
+/** Checkout Page-----------------------------------------
+----------------------**/
+    header #all:hover ~.jacketspecific{
+        left:45px;
+        top: 29px;
+    }
+    header #man:hover ~.jacketspecific{
+        left: 56px;
+        top: 60px;
+    }
+    header #woman:hover ~.jacketspecific{
+        left: 79px;
+        top: 89px;
+    }
+    header #sale:hover ~.jacketspecific{
+        left: 53px;
+        top: 119px;
+    }
+    header #new:hover ~.jacketspecific{
+        left: 55px;
+        top: 149px;
+    }
+    .jacketspecific p{
+        font-size: 16px;
+    }
+}
