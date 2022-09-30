@@ -36,7 +36,7 @@ header nav ul{
 }
 header nav a{
     font-size: 30px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 header nav a:hover{
     background-color: #152d35;

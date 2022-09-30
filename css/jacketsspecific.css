@@ -1,6 +1,7 @@
-.jacketspecific{
+/* .jacketspecific{
     display: none;
 }
+
 header #all:hover +.jacketspecific,
 header #man:hover ~.jacketspecific,
 header #woman:hover ~.jacketspecific,
@@ -9,10 +10,11 @@ header #new:hover ~.jacketspecific{
     display: block;
     left: 220px;
     position: absolute;
-    top: 100px;
+    top: 80px;
     background-color: #f4ebeb;
     padding: 5px;
 }
+
 header #man:hover ~.jacketspecific{
     left: 280px;
 }
@@ -24,4 +26,39 @@ header #sale:hover ~.jacketspecific{
 }
 header #new:hover ~.jacketspecific{
     left: 570px;
-}
+} */
+
+.menu {
+    /* background-color: #04AA6D; */
+    /* color: black; */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .jacketfilter {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .jacketspecific {
+    display: none;
+    position: absolute;
+    background-color: #f4ebeb;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .jacketspecific a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .jacketspecific a:hover {background-color: black;}
+  
+  .jacketfilter:hover .jacketspecific {display: block;}
+  
+  /* .jacketfilter:hover .menu {background-color: #3e8e41;} */
