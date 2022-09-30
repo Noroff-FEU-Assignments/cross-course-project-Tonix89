@@ -89,7 +89,7 @@
 
 /** Checkout Page-----------------------------------------
 ----------------------**/
-    header #all:hover ~.jacketspecific{
+    /* header #all:hover ~.jacketspecific{
         left:45px;
         top: 29px;
     }
@@ -108,7 +108,7 @@
     header #new:hover ~.jacketspecific{
         left: 55px;
         top: 149px;
-    }
+    } */
     .jacketspecific p{
         font-size: 16px;
     }
