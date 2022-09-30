@@ -103,7 +103,7 @@
         height: 25px;
         margin-right: 3px;
     }
-    header #all:hover ~.jacketspecific{
+    /* header #all:hover ~.jacketspecific{
         left:64px;
         top: 37px;
     }
@@ -122,7 +122,7 @@
     header #new:hover ~.jacketspecific{
         left: 90px;
         top: 194px;
-    }
+    } */
     .jacketspecific p{
         font-size: 25px;
         margin: 5px;
