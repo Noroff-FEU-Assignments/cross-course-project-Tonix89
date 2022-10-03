@@ -4,7 +4,7 @@
     header nav{
         position: none;
     }
-    .branding, .product{
+    .branding, .product, .show-more, .show-more2{
         padding: 2% 10%;
     }
     .branding img{
@@ -64,8 +64,8 @@
         margin-left: 20px;
         margin-top: 35px;
     }
-    .branding, .product{
-    padding: 2% 20%;
+    .branding, .product, .show-more, .show-more2{
+    padding: 2% 5%;
 }
     label img{
         width: 35px;

@@ -17,12 +17,15 @@
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     margin: auto;
-    grid-gap: 10px
+    grid-gap: 10px;
 }
 .picture{
     box-shadow: 2px 2px 4px #dbc7c7;
     width: 100%;
-    height: 350px;
+    height: 345px;
+}
+.price{
+    text-decoration: line-through;
 }
 .add-icon{
     width: 40px;
@@ -46,20 +49,17 @@
 .sale{
     grid-area: 1/1/1/1;
     margin: 318px 0 8px 8px;
-    background-color: #152d35;
-    color: #dbc7c7;
+    color: #152d35;
+    font-style: italic;
+    font-weight: bold;
     border-radius: 5px;
     width: 55px;
     text-align: center;
 }
-.orig-price{
-    text-decoration: line-through;
-    text-decoration-color: #152d35;
-}
 
 /** Style for List of Jackets page--------------------------------
 ------------------------------**/
-.more-products{
+/* .more-products{
     display: block;
     position: unset;
     text-align: center;
@@ -101,4 +101,4 @@
 }
 #see-more2:checked ~ .more-products2{
     display: none;
-}
+} */
