@@ -80,32 +80,18 @@
         <div class="icons">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7Mjbh2wwq89HayRS60rc_jI3Y6QmcnVf_Cas2QWR8dx378Q/viewform"><img src="icons/Icon material-question-answer.png"></a>
             <a><img src="icons/Liked items.png"></a>
-            <input type="checkbox" id="top-cart"/>
-            <label for="top-cart" class="top-cart"><img src="icons/Icon metro-cart.png"></label>
-            <input type="checkbox" id="top-cart"/>
-            <div class="cart">
-                <h1>Shopping Cart</h1>
-                <div class="cart-box">
-                    <div class="cart-box-item">
-                        <img src="images/Men running rain jacket blue 1.jpg"/>
-                        <div class="cart-info">
-                            <p>Regatta X-Pro Stretch</p>
-                            <p>Hybrid Hooded Fleece</p>
-                            <p>150 -</p>
+            <div class="top-cart">
+                <img id="cartview" src="icons/Icon metro-cart.png">
+                <div class="cart">
+                    <h1>Shopping Cart</h1>
+                    <div class="cart-box">
+                        <div class="cart-box-item cart-empty">
+                            <p>Your cart is empty</p>
                         </div>
                     </div>
-                    <hr>
-                    <div class="cart-box-item">
-                        <img src="images/RainyDays_Jacket1.jpg"/>
-                        <div class="cart-info">
-                            <p>Regatta X-Pro Stretch</p>
-                            <p>Hybrid Hooded Fleece</p>
-                            <p>150 -</p>
-                        </div>
+                    <div class="goto-checkout">
+                        <a href="checkoutpage.html"><p>Continue</p></a>
                     </div>
-                </div>
-                <div class="goto-checkout">
-                    <a href="checkoutpage.html"><p>Checkout</p></a>
                 </div>
             </div>
             <a><img src="icons/Profile Icon.png"></a>
@@ -113,17 +99,16 @@
     </header>
 
     <main class="checkout-page">
-        <input type="checkbox" id="payment" />
-        <label for="payment" class="pay-order">Pay Order</label>
+        <!-- <input type="checkbox" id="payment" />
+        <label for="payment" class="pay-order">Pay Order</label> -->
         <div class="checkout">
             <h1>Checkout</h1>
             <div class="checkout-container">
-                <div class="checkout-item">
-                    <img src="images/Men running rain jacket blue 1.jpg"/>
-                    <div class="cart-text">
-                        <p>Regatta X-Pro Stretch</p>
-                        <p>Hybrid Hooded Fleece</p>
-                        <form class="item-sizes">
+                <div class="checkout-item"></div>
+                <div class="itemCont"></div>
+                <!-- <div class="checkout-item">
+                    <div class="cart-item"></div>
+                    <form class="item-sizes">
                             <input type="radio" id="size-s" name="item-sizes">
                             <label for="size-s" class="size-s">S</label>
                             <input type="radio" id="size-m" name="item-sizes">
@@ -132,7 +117,7 @@
                             <label for="size-l" class="size-l">L</label>
                             <input type="radio" id="size-xl" name="item-sizes">
                             <label for="size-xl" class="size-xl">XL</label>
-                        </form>
+                    </form>
                         <br>
                         <form class="item-pieces">
                             <input type="button" id="minus" value="-">
@@ -142,33 +127,7 @@
                         </form>
                     </div>
                     <p>150 Kr.</p>
-                </div>
-                <div class="checkout-item">
-                    <img src="images/RainyDays_Jacket1.jpg"/>
-                    <div class="cart-text">
-                        <p>Regatta X-Pro Stretch</p>
-                        <p>Hybrid Hooded Fleece</p>
-                        <form class="item-sizes">
-                            <input type="radio" id="size-s" name="item-sizes">
-                            <label for="size-s" class="size-s">S</label>
-                            <input type="radio" id="size-m" name="item-sizes">
-                            <label for="size-m" class="size-m">M</label>
-                            <input type="radio" id="size-l" name="item-sizes">
-                            <label for="size-l" class="size-l">L</label>
-                            <input type="radio" id="size-xl" name="item-sizes">
-                            <label for="size-xl" class="size-xl">XL</label>
-                        </form>
-                        <br>
-                        <form class="item-pieces">
-                            <input type="button" id="minus" value="-">
-                            <p class="pieces-number">1</p>
-                            <input type="button" id="plus" value="+">
-                            <button type="reset" class="remove-button">Remove</button>
-                        </form>
-                    </div>
-                    <p>150 Kr.</p>
-                </div>
-                <hr>
+                </div>-->
                 <div>
                     <form class="discount-container">
                         <input placeholder="Enter discount code here.." type="text"  class="discount-code">
@@ -203,6 +162,9 @@
                     <p>Total Sum</p>
                     <p>300 kr.</p>
                 </div>
+            </div>
+            <div class="pay-order">
+                <p>Pay Order</p>
             </div>
         </div>
         <div class="success-container">
@@ -250,6 +212,7 @@
         </section>
         <p class="copyright">Copyright &copy; 2022. All Rights Reserved.</p>
     </footer>
-
+    <script src="js/shoppingcart/checkout.js" type="module"></script>
+    <script src="js/shoppingcart/cart.js" type="module"></script>
 </body>
 </html>

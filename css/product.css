@@ -24,7 +24,7 @@
     width: 100%;
     height: 345px;
 }
-.price{
+.voidpricestyle{
     text-decoration: line-through;
 }
 .add-icon{
@@ -46,10 +46,11 @@
     grid-area: 1/1/1/1;
     margin-left: 5px;
 }
-.sale{
+.salestyle{
     grid-area: 1/1/1/1;
     margin: 318px 0 8px 8px;
     color: #152d35;
+    background: #dbc7c7;
     font-style: italic;
     font-weight: bold;
     border-radius: 5px;

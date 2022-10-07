@@ -80,32 +80,18 @@
         <div class="icons">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7Mjbh2wwq89HayRS60rc_jI3Y6QmcnVf_Cas2QWR8dx378Q/viewform"><img src="icons/Icon material-question-answer.png"></a>
             <a><img src="icons/Liked items.png"></a>
-            <input type="checkbox" id="top-cart"/>
-            <label for="top-cart" class="top-cart"><img src="icons/Icon metro-cart.png"></label>
-            <input type="checkbox" id="top-cart"/>
-            <div class="cart">
-                <h1>Shopping Cart</h1>
-                <div class="cart-box">
-                    <div class="cart-box-item">
-                        <img src="images/Men running rain jacket blue 1.jpg"/>
-                        <div class="cart-info">
-                            <p>Regatta X-Pro Stretch</p>
-                            <p>Hybrid Hooded Fleece</p>
-                            <p>150 -</p>
+            <div class="top-cart">
+                <img id="cartview" src="icons/Icon metro-cart.png">
+                <div class="cart">
+                    <h1>Shopping Cart</h1>
+                    <div class="cart-box">
+                        <div class="cart-box-item cart-empty">
+                            <p>Your cart is empty</p>
                         </div>
                     </div>
-                    <hr>
-                    <div class="cart-box-item">
-                        <img src="images/RainyDays_Jacket1.jpg"/>
-                        <div class="cart-info">
-                            <p>Regatta X-Pro Stretch</p>
-                            <p>Hybrid Hooded Fleece</p>
-                            <p>150 -</p>
-                        </div>
+                    <div class="goto-checkout">
+                        <a href="checkoutpage.html"><p>Continue</p></a>
                     </div>
-                </div>
-                <div class="goto-checkout">
-                    <a href="checkoutpage.html"><p>Checkout</p></a>
                 </div>
             </div>
             <a><img src="icons/Profile Icon.png"></a>
@@ -175,5 +161,6 @@
         <p class="copyright">Copyright &copy; 2022. All Rights Reserved.</p>
     </footer>
     <script src="js/manpage.js" type="module"></script>
+    <script src="js/shoppingcart/cart.js" type="module"></script>
 </body>
 </html>
