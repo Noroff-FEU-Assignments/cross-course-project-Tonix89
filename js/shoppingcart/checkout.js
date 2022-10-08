@@ -23,20 +23,17 @@ async function apiCall() {
         const myItems = sessionStorage.getItem(id);
         console.log(typeof myItems);
         if (myItems !== null) {
-          checkOutItem.innerHTML += `<div class="itemX">${myItems}</div> <form class="item-sizes">
-          <input type="radio" id="size-s" name="item-sizes">
-          <label for="size-s" class="size-s">S</label>
-          <input type="radio" id="size-m" name="item-sizes">
-          <label for="size-m" class="size-m">M</label>
-          <input type="radio" id="size-l" name="item-sizes">
-          <label for="size-l" class="size-l">L</label>
-          <input type="radio" id="size-xl" name="item-sizes">
-          <label for="size-xl" class="size-xl">XL</label>
-      </form>
+          checkOutItem.innerHTML += `<div class="itemX">${myItems}</div> <div class="item-sizes">
+          <button  id="size-xs" name="item-sizes">XS</button>
+          <button  id="size-s" name="item-sizes">S</button>
+          <button  id="size-m" name="item-sizes">M</button>
+          <button  id="size-l" name="item-sizes">L</button>
+          <button  id="size-xl" name="item-sizes">XL</button>
+      </div>
       <br>
       <form class="item-pieces">
           <input type="button" id="minus" value="-">
-          <p class="pieces-number">1</p>
+          <div class="pieces-number">1</div>
           <input type="button" id="plus" value="+">
           <button type="reset" class="remove-button">Remove</button>
       </form> <hr class="itemhr">`;
