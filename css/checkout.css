@@ -142,14 +142,13 @@
 }
 .pay-order{
     background-color: #dbc7c7;
-    color: #152d35;
     font-weight: bold;
     font-family: "Tahoma";
-    width: 104px;
-    padding: 4px;
+    font-size: inherit;
+    padding: 14px;
+    border: none;
     border-radius: 10px;
     box-shadow: 2px 3px 3px;
-    text-align: center;
     margin-top: 10px;
 }
 #payment:checked~ .checkout{
