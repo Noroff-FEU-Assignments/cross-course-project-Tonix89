@@ -3,6 +3,7 @@ const url =
   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/All?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
 const cartBox = document.querySelector(".cart-box");
 const topCart = document.querySelector(".top-cart");
+const gotoCheck = document.querySelector(".goto-checkout");
 async function apiCall() {
   try {
     const productDatabase = await fetch(url);
@@ -29,11 +30,13 @@ async function apiCall() {
           const removeMark = document.querySelector(".mark");
           removeMark.remove();
           document.querySelector(".product-sample").className = "cart-box-item";
+          gotoCheck.style.display = "inline-block";
           continue;
         }
       }
     } else {
       cartBox.innerHTML = "Your Cart Is Empty";
+      gotoCheck.style.display = "none";
     }
   } catch (error) {
     console.log(error);
