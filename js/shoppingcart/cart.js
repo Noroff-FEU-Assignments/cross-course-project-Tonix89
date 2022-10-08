@@ -61,6 +61,7 @@ async function apiCall() {
 }
 
 topCart.onmouseover = apiCall;
+topCart.onclick = apiCall;
 
 /*export function cart(addCart, x) {
   const cartBox = document.querySelector(".cart-box");
