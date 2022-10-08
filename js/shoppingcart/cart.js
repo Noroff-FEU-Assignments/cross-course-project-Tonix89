@@ -48,7 +48,6 @@ async function apiCall() {
         removeMark.remove();
         document.querySelector(".product-sample").className = "cart-box-item";
         gotoCheck.style.display = "inline-block";
-        continue;
       }
     } else {
       cartBox.innerHTML = "Your Cart Is Empty";
