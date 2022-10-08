@@ -93,7 +93,7 @@ async function apiCall() {
             const singleProduct = productList[i].className;
             const x = productList[i].innerHTML;
             if (cartId === singleProduct) {
-              sessionStorage.setItem(singleProduct, x);
+              localStorage.setItem(singleProduct, x);
               //cart(addCart, x);
               /*const cartEmpty = document.querySelector(".cart-empty");
               cartEmpty.remove();*/

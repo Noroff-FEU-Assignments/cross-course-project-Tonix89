@@ -13,15 +13,16 @@ async function apiCall() {
     const details = result.values;
     console.log(typeof details);
     checkOutItem.innerHTML = "";
-    const storage = sessionStorage.key(1);
+    const storage = localStorage.key(0);
     if (storage) {
       for (let i = 1; i < details.length; i++) {
         const id = details[i][0];
         console.log(id);
         const discount = details[i][9];
         console.log(discount.length);
-        const myItems = sessionStorage.getItem(id);
-        console.log(typeof myItems);
+        const myItems = localStorage.getItem(id);
+        // console.log(myItems.length);
+        // const djf = myItems.length;
         if (myItems !== null) {
           checkOutItem.innerHTML += `<div class="itemX">${myItems}</div> <div class="item-sizes">
           <button  id="size-xs" name="item-sizes">XS</button>
@@ -60,47 +61,3 @@ async function apiCall() {
   }
 }
 apiCall();
-// import { message } from "../message/message.js";
-// const url =
-//   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/All?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
-// const cartBox = document.querySelector(".cart-box");
-// async function apiCall() {
-//   try {
-//     const productDatabase = await fetch(url);
-//     const result = await productDatabase.json();
-
-//     // console.log(result);
-
-//     const details = result.values;
-//     cartBox.innerHTML = "";
-//     const storage = sessionStorage.key(1);
-//     if (storage) {
-//       for (let i = 1; i < details.length; i++) {
-//         const id = details[i][0];
-//         console.log(id);
-//         const myItems = sessionStorage.getItem(id);
-//         console.log(typeof myItems);
-//         if (myItems !== null) {
-//           console.log("its working");
-//           cartBox.innerHTML += myItems;
-//           const removeAdd = document.querySelector(".add-icon");
-//           removeAdd.remove();
-//           const removeLike = document.querySelector(".like-icon");
-//           removeLike.remove();
-//           const removeMark = document.querySelector(".mark");
-//           removeMark.remove();
-//           document.querySelector(".product-sample").className = "cart-box-item";
-//           continue;
-//         }
-//       }
-//     } else {
-//       document.querySelector(".checkout-container").innerHTML =
-//         "Your Cart Is Empty";
-//     }
-//   } catch (error) {
-//     console.log(error);
-//     cartBox.innerHTML = message("error", error);
-//   }
-// }
-
-// apiCall();
