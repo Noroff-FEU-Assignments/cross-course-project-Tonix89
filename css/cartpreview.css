@@ -60,3 +60,12 @@
 .cart-text{
     margin-right: 20px;
 }
+.itemcount {
+    position: absolute;
+    top: 1px;
+    right: 66px;
+    background-color: #152d35;
+    padding: 1px;
+    border-radius: 25%;
+    color: #f4ebeb;
+}

@@ -9,6 +9,10 @@ const subject = document.getElementById("subject");
 const subjectError = document.getElementById("subjectError");
 const message = document.getElementById("message");
 const messageError = document.getElementById("messageError");
+const itemCount = document.querySelector(".itemcount");
+const storage = Object.keys(localStorage);
+console.log(storage.length);
+itemCount.innerHTML = storage.length;
 
 function validateForm(event) {
   event.preventDefault();

@@ -2,7 +2,10 @@ import { message } from "./message/message.js";
 
 const url =
   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/Man?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
-
+const itemCount = document.querySelector(".itemcount");
+const storage = Object.keys(localStorage);
+console.log(storage.length);
+itemCount.innerHTML = storage.length;
 console.log(url);
 
 const productPic = document.querySelector("#indexproduct");
@@ -90,7 +93,10 @@ async function apiCall() {
             const x = productList[i].innerHTML;
             if (cartId === singleProduct) {
               localStorage.setItem(singleProduct, x);
-              cart(addCart, x);
+              const itemCount = document.querySelector(".itemcount");
+              const storage = Object.keys(localStorage);
+              console.log(storage.length);
+              itemCount.innerHTML = storage.length;
               /*const cartEmpty = document.querySelector(".cart-empty");
               cartEmpty.remove();*/
               break;

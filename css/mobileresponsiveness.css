@@ -93,6 +93,10 @@
         width: 60px;
         height: 85px;
     }
+    .itemcount {
+        right: 40px;
+        top: 37px;
+    }
 
 /** Checkout Page-----------------------------------------
 ----------------------**/

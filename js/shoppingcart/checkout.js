@@ -3,6 +3,10 @@ const url =
   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/All?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
 const checkOutItem = document.querySelector(".checkout-item");
 const itemCont = document.querySelector(".itemCont");
+const itemCount = document.querySelector(".itemcount");
+const storage = Object.keys(localStorage);
+console.log(storage.length);
+itemCount.innerHTML = storage.length;
 async function apiCall() {
   try {
     const productDatabase = await fetch(url);

@@ -6,6 +6,10 @@ const url =
 console.log(url);
 
 const productPic = document.querySelector("#indexproduct");
+const itemCount = document.querySelector(".itemcount");
+const storage = Object.keys(localStorage);
+console.log(storage.length);
+itemCount.innerHTML = storage.length;
 
 async function apiCall() {
   try {
@@ -90,7 +94,10 @@ async function apiCall() {
             const x = productList[i].innerHTML;
             if (cartId === singleProduct) {
               localStorage.setItem(singleProduct, x);
-              cart(addCart, x);
+              const itemCount = document.querySelector(".itemcount");
+              const storage = Object.keys(localStorage);
+              console.log(storage.length);
+              itemCount.innerHTML = storage.length;
               /*const cartEmpty = document.querySelector(".cart-empty");
               cartEmpty.remove();*/
               break;

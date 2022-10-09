@@ -159,6 +159,9 @@
         width: 50px;
         height: 65px;
     }
+    .itemcount {
+        right: 47px;
+    }
 /** Checkout page ----------------------------------
 ---------------------**/
     .success-container div{
