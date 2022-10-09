@@ -1,5 +1,6 @@
 import { message } from "../message/message.js";
 import { payOrder } from "./total.js";
+import { remove } from "../buttons/remove.js";
 
 const url =
   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/All?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
@@ -9,6 +10,8 @@ const itemCount = document.querySelector(".itemcount");
 const storage = Object.keys(localStorage);
 console.log(storage.length);
 itemCount.innerHTML = storage.length;
+const removeId = document.querySelectorAll(".remove.button");
+console.log(removeId);
 
 async function apiCall() {
   try {
@@ -42,7 +45,9 @@ async function apiCall() {
           <input type="button" id="minus" value="-">
           <div class="pieces-number">1</div>
           <input type="button" id="plus" value="+">
-          <button type="reset" class="remove-button">Remove</button>
+          <div class="remove-button ${id}">
+          <button type="reset" >Remove</button>
+          </div>
       </form> <hr class="itemhr">`;
           document.querySelector(".add-icon").remove();
           document.querySelector(".like-icon").remove();
