@@ -122,12 +122,13 @@
 .total{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #152d35;
     color: #dbc7c7;
     padding: 5px;
     width: 100%;
 }
-.checkout-container .total p{
+.checkout-container .total{
     font-family: "Segoe UI Bold";
     font-style: oblique;
     font-size: 20px;

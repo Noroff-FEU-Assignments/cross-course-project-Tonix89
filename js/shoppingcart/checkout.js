@@ -1,12 +1,15 @@
 import { message } from "../message/message.js";
+// import { payOrder } from "./payorder.js";
+
 const url =
   "https://sheets.googleapis.com/v4/spreadsheets/1c-UabJv4YCvKHUHmo75vLGwB7Nflt0UbDS7DZf3Iq74/values/All?&key=AIzaSyBH_CwQRbwk6m0FKYcSnJEZl7OARPTsLW4";
 const checkOutItem = document.querySelector(".checkout-item");
-const itemCont = document.querySelector(".itemCont");
+const checkCont = document.querySelector(".checkout-container");
 const itemCount = document.querySelector(".itemcount");
 const storage = Object.keys(localStorage);
 console.log(storage.length);
 itemCount.innerHTML = storage.length;
+
 async function apiCall() {
   try {
     const productDatabase = await fetch(url);
@@ -17,8 +20,7 @@ async function apiCall() {
     const details = result.values;
     console.log(typeof details);
     checkOutItem.innerHTML = "";
-    const storage = localStorage.key(0);
-    if (storage) {
+    if (storage.length >= 1) {
       for (let i = 1; i < details.length; i++) {
         const id = details[i][0];
         console.log(id);
@@ -57,11 +59,49 @@ async function apiCall() {
         }
       }
     } else {
-      checkOutItem.innerHTML = "Your Cart Is Empty";
+      checkCont.innerHTML = "Your Cart Is Empty";
+      document.querySelector(".pay-order").style.display = "none";
     }
+    const lastPrice = document.querySelectorAll(".lastPrice");
+    console.log(lastPrice);
+    const discounted = document.querySelectorAll(".discount");
+    console.log(discounted);
+    payOrder(lastPrice, discounted);
   } catch (error) {
     console.log(error);
     checkOutItem.innerHTML = message("error", error);
   }
 }
 apiCall();
+
+function payOrder(lastPrice, discounted) {
+  console.log(lastPrice);
+  console.log(discounted);
+  let sum1 = 0;
+  for (let i = 0; i < discounted.length; i++) {
+    const discountPrice = discounted[i].innerHTML;
+    console.log(discountPrice.length);
+    if (discountPrice.length !== 0) {
+      const fgh = parseFloat(discountPrice);
+      console.log(fgh);
+      sum1 += fgh;
+      continue;
+    }
+  }
+  console.log(sum1);
+  let sum2 = 0;
+
+  for (let i = 0; i < lastPrice.length; i++) {
+    const price = lastPrice[i].innerHTML;
+    console.log(price.length);
+    if (price.length !== 0) {
+      const fwsef = parseFloat(price);
+      console.log(fwsef);
+      sum2 += fwsef;
+      continue;
+    }
+  }
+  console.log(sum2);
+  const total = sum1 + sum2;
+  document.querySelector(".totalPrice").innerHTML = total + "  kr.";
+}

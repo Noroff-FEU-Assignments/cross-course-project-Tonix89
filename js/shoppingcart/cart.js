@@ -4,10 +4,10 @@ import { message } from "../message/message.js";
 const cartBox = document.querySelector(".cart-box");
 const topCart = document.querySelector(".top-cart");
 const gotoCheck = document.querySelector(".goto-checkout");
-const storage = Object.keys(localStorage);
-console.log(storage.length);
 function addToCart() {
   try {
+    const storage = Object.keys(localStorage);
+    console.log(storage.length);
     cartBox.innerHTML = "";
     if (storage.length >= 1) {
       for (let i = 0; i < storage.length; i++) {
