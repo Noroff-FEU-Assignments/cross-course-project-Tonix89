@@ -41,8 +41,9 @@
 }
 .itemX{
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     padding: 5px;
+    max-width: fit-content;
 }
 .cart-text {
     display: grid;
