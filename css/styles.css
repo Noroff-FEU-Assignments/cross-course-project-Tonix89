@@ -38,7 +38,7 @@ body{
     grid-template-rows: auto 1fr auto ;
 }
 nav a, li, a{
-    grid-column: 1;
+    /* grid-column: 1; */
     grid-row: 1 / span 2;
     list-style: none;
     text-decoration: none;

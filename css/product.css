@@ -19,6 +19,13 @@
     margin: auto;
     grid-gap: 10px;
 }
+.single-product .product-details{
+    display: flex;
+    flex-direction: column;
+}
+.single-product img{
+ max-width: 100%;
+}
 .picture{
     box-shadow: 2px 2px 4px #dbc7c7;
     width: 100%;
@@ -57,6 +64,12 @@
     width: 55px;
     text-align: center;
 }
+
+.details-container{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
 
 /** Style for List of Jackets page--------------------------------
 ------------------------------**/

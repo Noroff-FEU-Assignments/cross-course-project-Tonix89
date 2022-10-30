@@ -34,7 +34,7 @@ async function apiCall() {
 
       productPic.innerHTML += `<div id="${result[i].id}">
                 <div class="product-sample">
-                <img class="picture" src="${pic}">
+                <a href="specificpage.html?id=${result[i].id}"><img src="${pic}" class="picture" ></a>
                 <div class="like-icon" >
                     <svg class="heart" viewBox="-1 -1 38 39">
                     <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
@@ -42,7 +42,7 @@ async function apiCall() {
                     </svg> 
                 </div>
                 <div class="mark">${mark}</div>
-            </div>
+                </div>
             <input type="image" src="icons/Add cart icon.png" class="add-icon ${result[i].id}"   name="add to cart" />
             <div class="itemText">
                 <div>

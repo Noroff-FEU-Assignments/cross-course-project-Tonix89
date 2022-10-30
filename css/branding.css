@@ -5,7 +5,7 @@ main{
     margin-top: 105px;
     padding: 10px;
 }
-.branding, .product, .show-more, .show-more2 {
+.branding, .product, .show-more, .show-more2, .single-product {
     padding: 2% 20%;
 }
 .branding img{

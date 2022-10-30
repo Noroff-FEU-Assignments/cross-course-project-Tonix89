@@ -116,10 +116,11 @@
         font-size: 25px;
         margin: 5px;
     }
+
 /** main---------------------------------------------
 ---------------------------------**/
     main{
-        margin-top: 80px;
+        margin-top: 72px;
     }
     .branding, .product{
         padding: 2% 5%;
